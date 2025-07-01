@@ -7,7 +7,7 @@ import axios from 'axios'
 import { useNavigate } from 'react-router-dom'
 import { toast } from 'react-toastify'
 import Loading from "../component/Loading";
-import { authDataContext } from '../context/authContext'
+import { authDataContext } from '../context/AuthContext'
 
 function PlaceOrder() {
     let [method,setMethod] = useState('cod')
