@@ -23,16 +23,18 @@ function Nav() {
 
 
     const handleLogout = async () => {
-        try {
-            const result = await axios.get(serverUrl + "/api/auth/logout" , {withCredentials:true})
-            console.log(result.data)
-           
-            navigate("/login")
-        } catch (error) {
-            console.log(error)
-        }
-        
-    }
+  try {
+    const result = await axios.get(serverUrl + "/api/auth/logout", {
+      withCredentials: true,
+    });
+    console.log("Logout response:", result.data);
+
+    // Fallback redirect
+    window.location.href = "/login";
+  } catch (error) {
+    console.error("Logout error:", error);
+  }
+};
   return (
     <div className='w-[100vw] h-[70px] bg-[#ecfafaec] z-10 fixed top-0 flex  items-center justify-between px-[30px] shadow-md shadow-black '>
 
