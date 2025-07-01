@@ -10,8 +10,8 @@ import { IoMdHome } from "react-icons/io";
 import { HiOutlineCollection } from "react-icons/hi";
 import { MdContacts } from "react-icons/md";
 import axios from 'axios';
-import { shopDataContext } from '../context/ShopContext';
 import { authDataContext } from '../context/AuthContext';
+import { shopDataContext } from '../context/ShopContext';
 
 
 function Nav() {
